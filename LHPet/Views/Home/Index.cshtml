@@ -18,13 +18,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                   @foreach (var item in @ViewBag.listaClientes)
+                   {
                     <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <th scope="row">@item.Id</th>
+                        <td>@item.Nome</td>
+                        <td>@item.Cpf</td>
+                        <td>@item.Email</td>
+                        <td>@item.Paciente</td>
                     </tr>
+                    }
                 </tbody>
             </table>
 
@@ -40,12 +43,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach (var item in @ViewBag.listaFornecedores)
+                   {
                     <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <th scope="row">@item.Id</th>
+                        <td>@item.Nome</td>
+                        <td>@item.Cnpj</td>
+                        <td>@item.Email</td>
                     </tr>
+                   }
                 </tbody>
             </table>
 
